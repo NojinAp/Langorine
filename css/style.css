@@ -275,6 +275,10 @@ nav ul {
         top: 18px;
     }
 
+    .huge-text {
+        font-size: 8vw;
+    }
+
     .nav-container {
         position: relative;
         flex-direction: column;
@@ -369,8 +373,25 @@ nav ul {
     }
 
     .section-title {
-        font-size: 8vw;
+        font-size: 10vw;
         margin-bottom: 6vw;
+    }
+
+    .journey-container {
+        flex-direction: column;
+    }
+
+    .journey-header {
+        font-size: 8vw;
+    }
+    
+    .journey-description {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .books-img {
+        width: 200px;
     }
 
     .site-footer {
