@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+.site-footer {
+    width: 100%;
+    padding: 2vw 0 1vw 0;
+    text-align: center;
+    font-size: 1.2vw;
+    color: #222;
+    background: none;
+    line-height: 0.8;
+}
+
+.footer-builder {
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin-bottom: 0.5vw;
+}
+.footer-rights {
+    font-size: 1.1vw;
+    color: #555;
+}
+
+body,
+html {
+    font-family: 'NTR', sans-serif;
+    background-color: #f3f0ed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scroll-top-img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: auto;
+}
+
+nav {
+    background: #fff;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    box-sizing: border-box;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-left li {
+    text-align: center;
+}
+
+.nav-brand {
+    margin-right: 32px;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #000;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-login {
+    background: #000;
+    color: #fff !important;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.nav-login:hover {
+    background: #222;
+}
+
+.nav-icon {
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+}
+
+.nav-brand-icon {
+    height: 80px;
+    width: 80px;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.huge-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    font-size: 7vw;
+    font-weight: bold;
+    text-align: center;
+
+    color: #222;
+    line-height: 1.1;
+}
+
+.black-section {
+    background: #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4.5vw 0 8vw 0;
+}
+
+.section-title {
+    color: white;
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 3vw;
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    gap: 3vw;
+    width: 90vw;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-box {
+    background: #fff;
+    color: #222;
+    flex: 1 1 0;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2vw;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    line-height: 1.5;
+    padding: 2vw 1vw;
+    text-align: center;
+}
+
+.flex-box img {
+    width: 6vw;
+    height: 6vw;
+
+    object-fit: contain;
+
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+.flex-box h2 {
+    margin: 0;
+    margin-bottom: 1vw;
+    font-size: 2vw;
+}
+
+.flex-box p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.box-text {
+    margin-top: auto;
+    margin-bottom: 2vw;
+    font-size: 1.3vw;
+    color: #444;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 3vw;
+    right: 3vw;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: opacity 0.3s;
+}
+
+#scrollTopBtn.show {
+    display: flex;
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 18px;
+    }
+
+    .nav-container {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-brand-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-left li:not(.nav-brand),
+    .nav-right {
+        display: none;
+    }
+
+    .nav-left.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        width: 100%;
+        gap: 16px;
+
+        margin-top: 10px;
+    }
+
+    .nav-left.active li {
+        display: block;
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .nav-right.active {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-login {
+        padding: 10px 22px;
+        width: 80vw;
+        max-width: 400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 6vw;
+    }
+
+    .flex-box {
+        width: 85vw;
+        max-width: 420px;
+        min-height: 420px;
+        padding: 4vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .flex-box h2 {
+        font-size: 6vw !important;
+        margin: 0 0 12px 0;
+        line-height: 1.2;
+        padding: 10px;
+    }
+
+    .flex-box p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .flex-box img {
+        width: 18vw;
+        height: 18vw;
+        margin-bottom: 4vw;
+    }
+
+    .box-text {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .section-title {
+        font-size: 8vw;
+        margin-bottom: 6vw;
+    }
+
+    .site-footer {
+        font-size: 16px; 
+        padding: 20px 0 10px 0;
+    }
+
+    .footer-builder {
+        font-size: 18px; 
+        margin-bottom: 6px;
+    }
+
+    .footer-rights {
+        font-size: 14px; 
+    }
+}
