@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
 
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const hamburger = document.getElementById('hamburger');
@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     elements.forEach(el => observer.observe(el));
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 1000) {
             scrollTopBtn.classList.add('show');
         } else {
             scrollTopBtn.classList.remove('show');
