@@ -431,7 +431,12 @@ nav ul {
         display: block;
         position: absolute;
         right: 20px;
-        top: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
         color: #000;
     }
 
