@@ -453,7 +453,11 @@ nav ul {
 
     .nav-left li:not(.nav-brand),
     .nav-right {
-        display: none;
+        position: absolute;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .nav-left.active {
@@ -466,14 +470,21 @@ nav ul {
         margin-top: 10px;
     }
 
-    .nav-left.active li {
-        display: block;
+    .nav-left.active li:not(.nav-brand) {
+        position: static;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
         text-align: center;
         width: 100%;
         font-size: 18px;
     }
 
     .nav-right.active {
+        position: static;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
         display: flex;
         justify-content: center;
         width: 100%;
