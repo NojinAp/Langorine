@@ -1,11 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: 'NTR', sans-serif;
     background-color: #f3f0ed;
-    width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    line-height: 1.5;
 }
 
 a {
@@ -18,7 +22,6 @@ a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
 }
 
 .huge-text {
@@ -26,17 +29,14 @@ a {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
-    font-size: 6vw;
+    font-size: clamp(32px, 6vw, 90px);
     font-weight: bold;
     text-align: center;
     color: #222;
-    line-height: 1.1;
 }
 
 .black-section {
     background: #000;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,15 +44,15 @@ a {
 }
 
 .how-section {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 0 5vw 0;
 }
 
 .how-title {
     color: #222;
-    font-size: 4vw;
+    font-size: clamp(28px, 4vw, 60px);
     margin: 0 0 3vw 0;
     text-align: center;
 }
@@ -61,23 +61,9 @@ a {
     display: flex;
     gap: 3vw;
     width: 90vw;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
-}
-
-.transparent-box {
-    color: #222;
-    flex: 1 1 0;
-    aspect-ratio: 1/1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.5;
-    padding: 2vw 1vw;
-    text-align: center;
-    font-size: 2vw;
-    font-weight: 500;
-    justify-content: center;
 }
 
 .how-icon {
@@ -95,13 +81,27 @@ a {
     align-self: center;
 }
 
-.transparent-box h2{
-    font-size: 2vw;
+.transparent-box {
+    color: #222;
+    flex: 1 1 0;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vw 1vw;
+    text-align: center;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 500;
+    justify-content: center;
+}
+
+.transparent-box h2 {
+    font-size: clamp(20px, 2vw, 28px);
 }
 
 .section-title {
     color: #fff;
-    font-size: 4vw;
+    font-size: clamp(28px, 4vw, 60px);
     margin: 0 0 3vw 0;
     text-align: center;
 }
@@ -110,6 +110,7 @@ a {
     display: flex;
     gap: 3vw;
     width: 90vw;
+    max-width: 1200px;
     justify-content: center;
     align-items: center;
 }
@@ -124,7 +125,6 @@ a {
     align-items: center;
     border-radius: 2vw;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    line-height: 1.5;
     padding: 2vw 1vw;
     text-align: center;
 }
@@ -138,25 +138,33 @@ a {
 
 .flex-box h2 {
     margin: 0 0 1vw 0;
-    font-size: 2vw;
+    font-size: clamp(20px, 6vw, 30px);
 }
 
 .flex-box p {
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: clamp(16px, 1.4vw, 20px);
 }
 
 .box-text {
     margin-top: auto;
     margin-bottom: 2vw;
-    font-size: 1.3vw;
+    font-size: clamp(16px, 1.2vw, 18px);
     color: #444;
     text-align: center;
-    line-height: 1.2;
 }
 
 .journey-section {
-    padding: 15vw 15vw;
+    padding: 120px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.journey-header {
+    font-size: clamp(24px, 4vw, 48px); 
+}
+
+.journey-description {
+    font-size: clamp(16px, 2.2vw, 24px); 
 }
 
 .journey-container {
@@ -168,8 +176,6 @@ a {
 
 .journey-text {
     flex: 1;
-    font-size: 24px;
-    line-height: 1.5;
 }
 
 .journey-image {
@@ -205,17 +211,12 @@ nav ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
 .nav-left {
     display: flex;
     align-items: center;
     gap: 24px;
-}
-
-.nav-left li {
-    text-align: center;
 }
 
 .nav-brand {
@@ -251,6 +252,7 @@ nav ul {
     align-items: center;
     gap: 8px;
     transition: background 0.2s;
+    justify-content: center;
 }
 
 .nav-login:hover {
@@ -272,33 +274,30 @@ nav ul {
 }
 
 .site-footer {
-    width: 100%;
     padding: 2vw 0 1vw 0;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: clamp(14px, 1.2vw, 18px);
     color: #222;
-    background: none;
-    line-height: 0.8;
 }
 
 .footer-builder {
-    font-size: 1.4vw;
+    font-size: clamp(16px, 1.4vw, 20px);
     font-weight: 500;
     margin-bottom: 0.5vw;
 }
 
 .footer-rights {
-    font-size: 1.1vw;
+    font-size: clamp(14px, 1.1vw, 18px);
     color: #555;
 }
 
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 3vw;
-    right: 3vw;
-    width: 60px;
-    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -317,10 +316,9 @@ nav ul {
 }
 
 .scroll-top-img {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     display: block;
-    margin: auto;
 }
 
 .reveal {
@@ -342,6 +340,72 @@ nav ul {
 .transparent-box:nth-child(3) { transition-delay: 0.2s; }
 .transparent-box:nth-child(5) { transition-delay: 0.3s; }
 
+.flex-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 1024px) and (min-width: 701px) {
+    .flex-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        gap: 3vw;
+        width: 90vw;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-items: center; /* center items in cells */
+    }
+
+    .flex-box {
+        aspect-ratio: 1/1; /* keeps them square */
+        width: 100%;        /* fills the cell */
+    }
+
+    .flex-box:nth-child(3) {
+        width: 100%;        /* same as others */
+        grid-column: 1 / -1;   /* span the full row */
+        justify-self: center;   /* center it horizontally in that row */
+        width: 50%;             /* optional: match width of top boxes */
+        max-width: 420px;       /* optional limit */
+    }
+
+    /* Stack "How it works" vertically */
+    .how-flex {
+        display: flex;
+        flex-direction: column; /* stack all steps vertically */
+        align-items: center;    /* center horizontally */
+        gap: 4vw;               /* spacing between boxes + arrows */
+    }
+
+    /* Make each arrow appear below the previous box */
+    .how-arrow-img {
+        display: block;        /* ensures arrow is block under box */
+        margin: 2vw auto;      /* vertical spacing + centered */
+        width: 10vw;
+        height: 10vw;
+        content: url("../images/down-arrow.png"); /* down arrow like mobile */
+    }
+
+    .transparent-box {
+        width: 85vw;
+        max-width: 420px;
+        padding: 4vw;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .how-icon {
+        width: 18vw;
+        height: 18vw;
+        margin-bottom: 5px;
+    }
+
+    .how-title {
+        margin-bottom: 6vw;
+        text-align: center;
+    }
+}
+
 @media (max-width: 700px) {
     .hamburger {
         display: block;
@@ -349,10 +413,6 @@ nav ul {
         right: 20px;
         top: 18px;
         color: #000;
-    }
-
-    .huge-text {
-        font-size: 8vw;
     }
 
     .nav-container {
@@ -400,10 +460,7 @@ nav ul {
         width: 80vw;
         max-width: 400px;
         margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        text-align: center;  
     }
 
     .flex-container {
@@ -417,7 +474,6 @@ nav ul {
         max-width: 420px;
         min-height: 420px;
         padding: 4vw;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -425,15 +481,8 @@ nav ul {
     }
 
     .flex-box h2 {
-        font-size: 6vw !important;
         margin: 0 0 12px 0;
-        line-height: 1.2;
         padding: 10px;
-    }
-
-    .flex-box p {
-        font-size: 16px;
-        line-height: 1.5;
     }
 
     .flex-box img {
@@ -443,13 +492,10 @@ nav ul {
     }
 
     .box-text {
-        font-size: 16px;
-        line-height: 1.4;
         margin: 0;
     }
 
     .section-title {
-        font-size: 10vw;
         margin-bottom: 6vw;
     }
 
@@ -457,27 +503,13 @@ nav ul {
         flex-direction: column;
     }
 
-    .journey-header {
-        font-size: 8vw;
-    }
-
-    .journey-description {
-        font-size: 18px;
-        line-height: 1.5;
-    }
-
     .books-img {
         width: 200px;
     }
 
-    .site-footer {
-        font-size: 16px;
-        padding: 20px 0 10px 0;
-    }
-
     .how-flex {
         flex-direction: column;
-        gap: 0vw;
+        gap: 0;
     }
 
     .how-arrow-img {
@@ -496,9 +528,7 @@ nav ul {
     }
 
     .transparent-box h2 {
-        font-size: 22px;
-        line-height: 1.4;
-         margin-bottom: 5px;
+        margin-bottom: 5px;
     }
 
     .how-icon {
@@ -508,16 +538,7 @@ nav ul {
     }
 
     .how-title {
-        font-size: 10vw;
         margin: 0;
     }
 
-    .footer-builder {
-        font-size: 18px;
-        margin-bottom: 6px;
-    }
-
-    .footer-rights {
-        font-size: 14px;
-    }
 }
