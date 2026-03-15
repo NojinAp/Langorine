@@ -430,7 +430,8 @@ nav ul {
     .hamburger {
         display: block;
         position: absolute;
-        right: 20px;
+        left: 20px;
+        /* move to left */
         top: 50%;
         transform: translateY(-50%);
         font-size: 28px;
@@ -438,12 +439,22 @@ nav ul {
         border: none;
         cursor: pointer;
         color: #000;
+        z-index: 1100;
     }
 
     .nav-container {
         position: relative;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+
+
+    .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
     .nav-brand-icon {
