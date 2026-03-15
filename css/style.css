@@ -444,13 +444,11 @@ nav ul {
         position: relative;
         display: flex;
         justify-content: center;
-        /* logo stays centered */
         align-items: center;
         width: 100%;
         padding: 12px 20px;
     }
 
-    /* Hamburger button */
     .hamburger {
         display: block;
         position: absolute;
@@ -464,7 +462,6 @@ nav ul {
         z-index: 1100;
     }
 
-    /* Logo stays centered */
     .nav-brand {
         position: absolute;
         left: 50%;
@@ -481,9 +478,10 @@ nav ul {
     .nav-brand-icon {
         width: 40px;
         height: 40px;
+        padding: 0;
+        margin: 0;
     }
 
-    /* Mobile dropdown menu */
     .nav-menu {
         position: absolute;
         top: 100%;
@@ -511,7 +509,6 @@ nav ul {
         max-height: 400px;
     }
 
-    /* menu items */
     .nav-left li {
         font-size: 18px;
     }
@@ -520,7 +517,6 @@ nav ul {
         display: none;
     }
 
-    /* sign in button */
     .nav-login {
         padding: 10px 22px;
         width: 80vw;
