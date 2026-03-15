@@ -13,8 +13,7 @@ window.addEventListener('load', () => {
 
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const hamburger = document.getElementById('hamburger');
-    const navLeft = document.querySelector('.nav-left');
-    const navRight = document.querySelector('.nav-right');
+    const menu = document.querySelector(".nav-menu");
     const elements = document.querySelectorAll(".reveal");
 
     /**
@@ -62,8 +61,7 @@ window.addEventListener('load', () => {
      * No return value.
      */
     hamburger.addEventListener('click', () => {
-        navLeft.classList.toggle('active');
-        navRight.classList.toggle('active');
+        menu.classList.toggle('active');
         const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
         hamburger.setAttribute('aria-expanded', !expanded);
     });

@@ -222,7 +222,20 @@ nav ul {
 .nav-left {
     display: flex;
     align-items: center;
+    gap: 30px;
+}
+
+.nav-menu {
+    display: flex;
     gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
 }
 
 .nav-brand {
@@ -239,11 +252,6 @@ nav ul {
     width: 80px;
     margin-right: 10px;
     border-radius: 8px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
 }
 
 .nav-login {
@@ -277,6 +285,10 @@ nav ul {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.mobile-login {
+    display: none;
 }
 
 .site-footer {
@@ -427,34 +439,43 @@ nav ul {
 }
 
 @media (max-width: 700px) {
+
+    .nav-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        /* logo stays centered */
+        align-items: center;
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    /* Hamburger button */
     .hamburger {
         display: block;
         position: absolute;
         left: 20px;
-        /* move to left */
         top: 50%;
         transform: translateY(-50%);
         font-size: 28px;
         background: none;
         border: none;
         cursor: pointer;
-        color: #000;
         z-index: 1100;
     }
 
-    .nav-container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-
+    /* Logo stays centered */
     .nav-brand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         align-items: center;
         gap: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        z-index: 1000;
     }
 
     .nav-brand-icon {
@@ -462,52 +483,52 @@ nav ul {
         height: 40px;
     }
 
-    .nav-left li:not(.nav-brand),
-    .nav-right {
+    /* Mobile dropdown menu */
+    .nav-menu {
         position: absolute;
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .nav-left.active {
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center;
-        width: 100%;
-        gap: 16px;
-        margin-top: 10px;
+        gap: 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
     }
 
-    .nav-left.active li:not(.nav-brand) {
-        position: static;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-        text-align: center;
-        width: 100%;
+    .nav-menu li:first-child {
+        margin-top: 20px;
+    }
+
+    .nav-menu li:last-child {
+        margin-bottom: 20px;
+    }
+
+    .nav-menu.active {
+        max-height: 400px;
+    }
+
+    /* menu items */
+    .nav-left li {
         font-size: 18px;
     }
 
-    .nav-right.active {
-        position: static;
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 10px;
+    .nav-right {
+        display: none;
     }
 
+    /* sign in button */
     .nav-login {
         padding: 10px 22px;
         width: 80vw;
         max-width: 400px;
-        margin: 0 auto;
-        text-align: center;
+    }
+
+    .mobile-login {
+        display: flex;
     }
 
     .flex-container {
