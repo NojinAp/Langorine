@@ -16,6 +16,12 @@ body {
     padding: 0;
     overflow-x: hidden;
     line-height: 1.5;
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -178,6 +184,7 @@ nav ul {
     text-align: center;
     font-size: 16px;
     color: #222;
+    margin-top: auto;
 }
 
 .footer-builder {
@@ -190,7 +197,25 @@ nav ul {
     color: #555;
 }
 
+@media (max-width: 1024px) and (min-width: 701px) {
+
+    .nav-brand {
+        font-size: 22px;
+        margin-right: 18px;
+    }
+
+    .nav-brand-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+}
+
 @media (max-width: 700px) {
+
+    .main-title {
+        padding-top: 100px;
+    }
 
     .nav-container {
         position: relative;
