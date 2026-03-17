@@ -202,6 +202,17 @@ nav ul {
     color: #555;
 }
 
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 1024px) and (min-width: 701px) {
 
     .nav-brand {

@@ -59,4 +59,66 @@ window.addEventListener('load', () => {
             });
         }
     });
+
+    function resetForm() {
+        const form = document.getElementById('contactForm');
+        const successMsg = document.getElementById('formSuccess');
+
+        if (form && successMsg) {
+            form.reset();
+            form.style.display = 'block';
+            successMsg.style.display = 'none';
+        }
+    }
+
+    /**
+     * Initializes the contact form functionality when the DOM is loaded
+     * No parameters. Triggered by DOMContentLoaded event.
+     * No return value.
+     */
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+
+    if (form && successMsg) {
+        /**
+         * Handles form submission
+         * @param {Event} e - The submit event object
+         * No return value.
+         */
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Here you would normally send the form data to a server
+            // For now, we'll just show the success message
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+
+            // Log form data for demonstration (remove in production)
+            const formData = new FormData(form);
+            console.log('Form submitted:', Object.fromEntries(formData));
+        });
+    }
+
+    // Add input animations
+    const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+
+    formInputs.forEach(input => {
+        /**
+         * Adds a class to parent when input is focused
+         * No parameters. Triggered by focus event.
+         * No return value.
+         */
+        input.addEventListener('focus', function () {
+            this.closest('.form-group').classList.add('focused');
+        });
+
+        /**
+         * Removes class from parent when input loses focus
+         * No parameters. Triggered by blur event.
+         * No return value.
+         */
+        input.addEventListener('blur', function () {
+            this.closest('.form-group').classList.remove('focused');
+        });
+    });
 });
