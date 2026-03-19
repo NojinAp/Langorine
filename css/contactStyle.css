@@ -293,6 +293,36 @@ nav ul {
     color: #555;
 }
 
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: opacity 0.3s;
+}
+
+#scrollTopBtn.show {
+    display: flex;
+    opacity: 1;
+}
+
+.scroll-top-img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
