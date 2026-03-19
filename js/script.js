@@ -12,7 +12,7 @@ window.addEventListener('load', () => {
             }
         });
     }, {
-        threshold: 0.15
+        threshold: 0.4
     });
 
     elements.forEach(el => observer.observe(el));
