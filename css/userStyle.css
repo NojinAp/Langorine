@@ -304,10 +304,6 @@ nav ul {
         height: 64px;
     }
 
-    body {
-        padding-top: 64px;
-    }
-
     .main-title {
         padding-top: 60px;
     }
@@ -401,6 +397,10 @@ nav ul {
 
     #mobileUserDropdown {
         padding-top: 0;
+    }
+
+    .level-options {
+        margin-bottom: 80px;
     }
 
 }
