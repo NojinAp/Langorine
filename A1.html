@@ -22,25 +22,44 @@ Team Finaly Delivery - French self-learning Platform
         <div class="nav-container">
 
             <button class="hamburger" id="hamburger" aria-expanded="false">☰</button>
+
             <div class="nav-left">
-                <div class="nav-brand"> <img src="images/icons/icon.png" alt="Langorine" class="nav-brand-icon">
+                <div class="nav-brand">
+                    <img src="images/icons/icon.png" alt="Langorine" class="nav-brand-icon">
                     angorine
                 </div>
+
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="support.html">Support</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                    <li class="nav-login mobile-login"> <img src="images/icons/home.png" alt="User"
-                            class="nav-icon">Hello,
-                        user.firstName!</li>
+                    <li><a href="A1.html">Library</a></li>
+                    <li class="nav-login mobile-login dropdown" id="mobileUserDropdown">
+                        <img src="images/icons/home.png" alt="User" class="nav-icon">
+                        <span class="user-login-text">Hello, user.firstName!</span>
+
+                        <div class="dropdown-menu">
+                            <a href="user.html" class="dropdown-btn">Level: user.level</a>
+                            <button class="dropdown-btn">Sign Out</button>
+                            <button class="dropdown-btn danger">Delete Account</button>
+                        </div>
+                    </li>
                 </ul>
             </div>
+
             <ul class="nav-right">
-                <li class="nav-login"> <img src="images/icons/home.png" alt="User" class="nav-icon">Hello,
-                    user.firstName!
+                <li class="nav-login dropdown" id="userDropdown">
+                    <img src="images/icons/home.png" alt="User" class="nav-icon">
+                    <span class="user-login-text">Hello, user.firstName!</span>
+
+                    <div class="dropdown-menu">
+                        <a href="user.html" class="dropdown-btn">Level: user.level</a>
+                        <button class="dropdown-btn">Sign Out</button>
+                        <button class="dropdown-btn danger">Delete Account</button>
+                    </div>
                 </li>
             </ul>
+
         </div>
     </nav>
 

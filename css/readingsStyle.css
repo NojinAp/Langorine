@@ -161,6 +161,7 @@ nav ul {
     cursor: pointer;
     font-size: 14px;
     transition: 0.2s;
+    text-align: center;
 }
 
 .dropdown-btn:hover {
