@@ -190,8 +190,8 @@ nav ul {
 }
 
 .faq-arrow {
-    width: 24px;
-    height: 24px;
+    width: clamp(15px, 3vw, 20px);
+    height: clamp(20px, 3vw, 20px);
     cursor: pointer;
     transition: transform 0.3s ease;
 }

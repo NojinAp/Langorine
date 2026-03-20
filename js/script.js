@@ -121,4 +121,18 @@ window.addEventListener('load', () => {
             this.closest('.form-group').classList.remove('focused');
         });
     });
+
+    const mobileDropdown = document.getElementById("mobileUserDropdown");
+
+    // Close dropdown if click outside
+    document.addEventListener("click", function (e) {
+        if (!mobileDropdown.contains(e.target)) {
+            mobileDropdown.classList.remove("open");
+        }
+    });
+
+    mobileDropdown.querySelector(".user-login-text").addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileDropdown.classList.toggle("open");
+    });
 });
