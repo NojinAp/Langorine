@@ -1,0 +1,134 @@
+<!--
+Group 37
+Date: March 16, 2026
+Team Finaly Delivery - French self-learning Platform
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langorine</title>
+    <link rel="stylesheet" href="css/readingsStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icons/icon.png">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+
+            <button class="hamburger" id="hamburger" aria-expanded="false">☰</button>
+            <div class="nav-left">
+                <div class="nav-brand"> <img src="images/icons/icon.png" alt="Langorine" class="nav-brand-icon">
+                    angorine
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li class="nav-login mobile-login"> <img src="images/icons/home.png" alt="User"
+                            class="nav-icon">Hello,
+                        user.firstName!</li>
+                </ul>
+            </div>
+            <ul class="nav-right">
+                <li class="nav-login dropdown">
+
+                    <!-- hidden toggle -->
+                    <input type="checkbox" id="user-menu-toggle">
+
+                    <!-- clickable label -->
+                    <label for="user-menu-toggle" class="user-toggle">
+                        <img src="images/icons/home.png" alt="User" class="nav-icon">
+                        Hello, user.firstName!
+                    </label>
+
+                    <!-- dropdown -->
+                    <div class="dropdown-menu">
+                        <button class="dropdown-btn">Sign Out</button>
+                        <button class="dropdown-btn danger">Delete Account</button>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="content-layout">
+
+        <!-- HIDDEN RADIO INPUTS -->
+        <input type="radio" name="story" id="story1" checked>
+        <input type="radio" name="story" id="story2">
+        <input type="radio" name="story" id="story3">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="sidebar-title">Poems</div>
+
+            <label for="story1">The Lost Cat</label>
+            <label for="story2">A Day in Paris</label>
+            <label for="story3">The Secret Letter</label>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="story-content">
+
+            <div class="story story1">
+                <h2>The Lost Cat</h2>
+
+                <p class="original">
+                    One quiet afternoon, a small cat wandered away from home...
+                </p>
+
+                <div class="translation-box">
+                    <div class="translation-title">Translation</div>
+                    <p>
+                        Un après-midi calme, un petit chat s'est éloigné de chez lui...
+                    </p>
+                </div>
+            </div>
+
+            <div class="story story2">
+                <h2>The Lost Cat</h2>
+
+                <p class="original">
+                    One quiet afternoon, a small cat wandered away from home...
+                </p>
+
+                <div class="translation-box">
+                    <div class="translation-title">Translation</div>
+                    <p>
+                        Un après-midi calme, un petit chat s'est éloigné de chez lui...
+                    </p>
+                </div>
+            </div>
+
+            <div class="story story3">
+                <h2>The Lost Cat</h2>
+
+                <p class="original">
+                    One quiet afternoon, a small cat wandered away from home...
+                </p>
+
+                <div class="translation-box">
+                    <div class="translation-title">Translation</div>
+                    <p>
+                        Un après-midi calme, un petit chat s'est éloigné de chez lui...
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <button id="scrollTopBtn">
+        <img src="images/icons/curved-arrow.png" alt="Scroll to top" class="scroll-top-img">
+    </button>
+
+</body>
+
+</html>

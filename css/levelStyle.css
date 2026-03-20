@@ -18,7 +18,6 @@ body {
     line-height: 1.5;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -210,7 +209,6 @@ nav ul {
 .fun-cards {
     display: flex;
     gap: 3vw;
-    /* more proportional */
     width: 90vw;
     max-width: 1200px;
     justify-content: center;
@@ -228,13 +226,6 @@ nav ul {
     gap: 15px;
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-
-.fun-card:hover {
-    background: #222;
-    transform: translateY(-10px);
-    /* stronger */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .fun-card img {
@@ -297,6 +288,12 @@ nav ul {
 
 .fun-card:nth-child(3) {
     transition-delay: 0.3s;
+}
+
+.fun-card:hover {
+    background: #222;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 #scrollTopBtn {
