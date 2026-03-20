@@ -40,6 +40,67 @@ window.addEventListener('load', () => {
         });
     }
 
+    const guestNav = document.getElementById("guestNav");
+    const userNav = document.getElementById("userNav");
+
+    const mobileGuestNav = document.getElementById("mobileGuestNav");
+    const mobileUserNav = document.getElementById("mobileUserNav");
+
+    const logoutBtn = document.getElementById("logoutBtn");
+    const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
+
+    // TEMP toggle (no login system yet)
+    let isLoggedIn = false;
+
+    function updateNav() {
+        if (isLoggedIn) {
+            if (guestNav) guestNav.style.display = "none";
+            if (userNav) userNav.style.display = "flex";
+
+            if (mobileGuestNav) mobileGuestNav.style.display = "none";
+            if (mobileUserNav) mobileUserNav.style.display = "flex";
+        } else {
+            if (guestNav) guestNav.style.display = "flex";
+            if (userNav) userNav.style.display = "none";
+
+            if (mobileGuestNav) mobileGuestNav.style.display = "flex";
+            if (mobileUserNav) mobileUserNav.style.display = "none";
+        }
+    }
+
+    // simulate login (click sign in)
+    if (guestNav) {
+        guestNav.addEventListener("click", () => {
+            isLoggedIn = true;
+            updateNav();
+        });
+    }
+
+    if (mobileGuestNav) {
+        mobileGuestNav.addEventListener("click", () => {
+            isLoggedIn = true;
+            updateNav();
+        });
+    }
+
+    // logout
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", () => {
+            isLoggedIn = false;
+            updateNav();
+        });
+    }
+
+    if (mobileLogoutBtn) {
+        mobileLogoutBtn.addEventListener("click", () => {
+            isLoggedIn = false;
+            updateNav();
+        });
+    }
+
+    // initialize
+    updateNav();
+
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
@@ -122,39 +183,39 @@ window.addEventListener('load', () => {
         });
     });
 
-const mobileDropdown = document.getElementById("mobileUserDropdown");
+    const mobileDropdown = document.getElementById("mobileUserDropdown");
 
-if (mobileDropdown) {
-    mobileDropdown.addEventListener("click", function (e) {
-        e.stopPropagation();
-        mobileDropdown.classList.toggle("open");
-    });
+    if (mobileDropdown) {
+        mobileDropdown.addEventListener("click", function (e) {
+            e.stopPropagation();
+            mobileDropdown.classList.toggle("open");
+        });
 
-    document.addEventListener("click", function (e) {
-        if (!mobileDropdown.contains(e.target)) {
-            mobileDropdown.classList.remove("open");
-        }
-    });
-}
-
-const mobilePoemToggle = document.getElementById("mobilePoemToggle");
-const sidebar = document.querySelector(".sidebar");
-
-if (mobilePoemToggle && sidebar) {
-    mobilePoemToggle.addEventListener("click", function () {
-        mobilePoemToggle.classList.toggle("open");
-        sidebar.classList.toggle("open");
-    });
-
-    const storyLabels = sidebar.querySelectorAll("label");
-
-    storyLabels.forEach(label => {
-        label.addEventListener("click", function () {
-            if (window.innerWidth <= 700) {
-                sidebar.classList.remove("open");
-                mobilePoemToggle.classList.remove("open");
+        document.addEventListener("click", function (e) {
+            if (!mobileDropdown.contains(e.target)) {
+                mobileDropdown.classList.remove("open");
             }
         });
-    });
-}
+    }
+
+    const mobilePoemToggle = document.getElementById("mobilePoemToggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    if (mobilePoemToggle && sidebar) {
+        mobilePoemToggle.addEventListener("click", function () {
+            mobilePoemToggle.classList.toggle("open");
+            sidebar.classList.toggle("open");
+        });
+
+        const storyLabels = sidebar.querySelectorAll("label");
+
+        storyLabels.forEach(label => {
+            label.addEventListener("click", function () {
+                if (window.innerWidth <= 700) {
+                    sidebar.classList.remove("open");
+                    mobilePoemToggle.classList.remove("open");
+                }
+            });
+        });
+    }
 });
