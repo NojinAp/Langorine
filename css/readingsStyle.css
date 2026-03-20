@@ -20,7 +20,7 @@ body {
     max-width: 100%;
     min-height: 100vh;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -140,12 +140,6 @@ nav ul {
     transition: 0.25s ease;
 }
 
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-}
-
 .dropdown-menu::before {
     content: "";
     position: absolute;
@@ -183,7 +177,8 @@ nav ul {
 
 .content-layout {
     display: flex;
-    height: calc(100vh - 104px);
+    flex: 1;
+    min-height: 0;
 }
 
 input[type="radio"] {
@@ -341,7 +336,28 @@ input[type="radio"] {
     display: block;
 }
 
+.mobile-poem-toggle {
+    display: none;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 1024px) and (min-width: 701px) {
+
+    body {
+        padding-top: 79px;
+    }
+
+    .content-layout {
+        height: calc(100vh - 79px);
+    }
 
     .nav-brand {
         font-size: 22px;
@@ -357,6 +373,14 @@ input[type="radio"] {
 
 @media (max-width: 700px) {
 
+    nav {
+        padding: 0;
+        height: 64px;
+    }
+
+    body {
+        padding-top: 64px;
+    }
 
     .main-title {
         padding-top: 100px;
@@ -368,7 +392,8 @@ input[type="radio"] {
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding: 12px 20px;
+        padding: 0 20px;
+        height: 64px;
     }
 
     .hamburger {
@@ -395,7 +420,7 @@ input[type="radio"] {
 
     .nav-menu {
         position: absolute;
-        top: 35px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: #fff;
@@ -404,12 +429,13 @@ input[type="radio"] {
         gap: 18px;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease;
+        opacity: 0;
+        transition: max-height 0.35s ease, opacity 0.25s ease;
     }
 
     .nav-menu.active {
         max-height: 400px;
-        overflow: visible;
+        opacity: 1;
     }
 
     .nav-right {
@@ -425,17 +451,114 @@ input[type="radio"] {
         display: flex;
     }
 
-    /* Mobile dropdown toggle */
+    #mobileUserDropdown {
+        position: relative;
+    }
+
+    #mobileUserDropdown .dropdown-menu {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+
     #mobileUserDropdown.open .dropdown-menu {
         opacity: 1;
         pointer-events: auto;
         transform: translateY(0);
-        overflow: visible;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
     }
-    
-}
 
+    #mobileUserDropdown {
+        padding-top: 0;
+    }
+
+    .content-layout {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mobile-poem-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        background: #111;
+        color: #fff;
+        padding: clamp(8px, 2.5vw, 12px) clamp(16px, 4vw, 20px);
+        font-size: clamp(14px, 3.5vw, 16px);
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .mobile-poem-arrow {
+        font-size: clamp(12px, 3vw, 16px);
+        transition: transform 0.25s ease;
+    }
+
+    .mobile-poem-toggle.open .mobile-poem-arrow {
+        transform: rotate(180deg);
+    }
+
+    .sidebar {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        background: #111;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+    }
+
+    .sidebar.open {
+        max-height: 300px;
+    }
+
+    .sidebar-title {
+        display: none;
+    }
+
+    .sidebar label {
+        border-top: none;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 48px;
+        padding: 0 10px;
+        font-size: 14px;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .sidebar label:hover {
+        background: #222;
+    }
+
+    .story-content {
+        margin: 20px;
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .story-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .story-content p {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .translation-box {
+        padding: 16px;
+    }
+
+}

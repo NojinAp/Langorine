@@ -122,17 +122,39 @@ window.addEventListener('load', () => {
         });
     });
 
-    const mobileDropdown = document.getElementById("mobileUserDropdown");
+const mobileDropdown = document.getElementById("mobileUserDropdown");
 
-    // Close dropdown if click outside
+if (mobileDropdown) {
+    mobileDropdown.addEventListener("click", function (e) {
+        e.stopPropagation();
+        mobileDropdown.classList.toggle("open");
+    });
+
     document.addEventListener("click", function (e) {
         if (!mobileDropdown.contains(e.target)) {
             mobileDropdown.classList.remove("open");
         }
     });
+}
 
-    mobileDropdown.querySelector(".user-login-text").addEventListener("click", function (e) {
-        e.stopPropagation();
-        mobileDropdown.classList.toggle("open");
+const mobilePoemToggle = document.getElementById("mobilePoemToggle");
+const sidebar = document.querySelector(".sidebar");
+
+if (mobilePoemToggle && sidebar) {
+    mobilePoemToggle.addEventListener("click", function () {
+        mobilePoemToggle.classList.toggle("open");
+        sidebar.classList.toggle("open");
     });
+
+    const storyLabels = sidebar.querySelectorAll("label");
+
+    storyLabels.forEach(label => {
+        label.addEventListener("click", function () {
+            if (window.innerWidth <= 700) {
+                sidebar.classList.remove("open");
+                mobilePoemToggle.classList.remove("open");
+            }
+        });
+    });
+}
 });
