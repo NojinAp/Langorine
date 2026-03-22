@@ -170,12 +170,14 @@ nav ul {
     padding: 10px;
     border: none;
     border-radius: 6px;
-    font-family: 'NTR', sans-serif;
     background: #eee;
     cursor: pointer;
+    font-family: 'NTR', sans-serif;
     font-size: 14px;
     transition: 0.2s;
     text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .dropdown-btn:hover {
