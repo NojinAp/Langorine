@@ -30,16 +30,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100dvh;
 }
 
 .huge-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-size: clamp(32px, 6vw, 90px);
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     color: #222;
 }
@@ -258,18 +257,14 @@ nav ul {
 }
 
 .nav-login {
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 18px;
-    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: background 0.2s;
-    justify-content: center;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    background: #000;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px 18px;
+    text-decoration: none;
 }
 
 .nav-login:hover {
@@ -299,6 +294,7 @@ nav ul {
     text-align: center;
     font-size: clamp(14px, 1.2vw, 18px);
     color: #222;
+    margin-top: auto;
 }
 
 .footer-builder {
@@ -526,7 +522,11 @@ nav ul {
     }
 
     .nav-login {
-        padding: 10px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-align: center;
         width: 80vw;
         max-width: 400px;
     }

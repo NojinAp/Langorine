@@ -1,6 +1,6 @@
 /*
 Group 37
-Date: March 16, 2026
+Date: March 21, 2026
 Team Finaly Delivery - French self-learning Platform
 */
 
@@ -14,16 +14,18 @@ body {
     background-color: #f3f0ed;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     line-height: 1.5;
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
     min-height: 100vh;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+    padding-top: 104px;
 }
 
 a {
@@ -92,14 +94,18 @@ nav ul {
 }
 
 .nav-login {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #000;
-    color: #fff;
-    border-radius: 6px;
-    padding: 8px 18px;
-    text-decoration: none;
+    transition: background 0.2s;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .nav-login:hover {
@@ -112,92 +118,74 @@ nav ul {
     border-radius: 4px;
 }
 
-.contact-section {
-    padding-top: 140px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.contact-header {
-    text-align: center;
-    margin-bottom: 40px;
+.mobile-login {
+    display: none;
 }
 
-.huge-text {
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 20px;
-}
-
-.contact-subtitle {
-    font-size: clamp(16px, 1.5vw, 20px);
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-.contact-form-wrapper {
+.container {
     background: #fff;
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-    width: 100%;
     max-width: 700px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    margin: 80px auto 100px auto;
 }
 
-.contact-form {
-    width: 100%;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.form-group {
+h2 {
     margin-bottom: 25px;
+    font-size: 26px;
 }
 
-.required {
-    color: #e44d4d;
+.input-group {
+    margin-bottom: 16px;
+    text-align: left;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+.input-group label {
+    font-size: 14px;
+}
+
+.input-group input {
     width: 100%;
-    padding: 15px;
+    padding: 5px 10px;
+    margin-top: 5px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
     font-size: 16px;
     font-family: 'NTR', sans-serif;
-    border: 2px solid #e0e0e0;
-    border-radius: 12px;
     background: #f9f9f9;
     transition: all 0.3s ease;
 }
 
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group textarea:focus {
+.input-group input:focus {
     outline: none;
     border-color: #888;
     background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-.form-group input[type="text"]:hover,
-.form-group input[type="email"]:hover,
-.form-group textarea:hover {
+.input-group input:hover {
     border-color: #aaa;
 }
 
-.submit-btn {
+.btn {
     width: 100%;
-    padding: 18px 30px;
+    padding: 5px;
     font-size: 20px;
     font-family: 'NTR', sans-serif;
     font-weight: 600;
@@ -211,64 +199,18 @@ nav ul {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
-.submit-btn:hover {
+.btn:hover {
     background: #222;
 }
 
-.form-success {
-    text-align: center;
-    padding: 40px 20px;
+.extra {
+    margin-top: 15px;
+    font-size: 14px;
 }
 
-.success-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-}
-
-.form-success h3 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.form-success p {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.send-another-btn {
-    background: #000;
-    padding: 15px 40px;
-    font-size: 18px;
-    border: none;
-    border-radius: 6px;
-    font-family: 'NTR', sans-serif;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.2s;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-}
-
-.send-another-btn:hover {
-    background: #222;
-}
-
-.hamburger {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.mobile-login {
-    display: none;
+.extra a {
+    color: #000;
+    font-weight: bold;
 }
 
 .site-footer {
@@ -290,40 +232,10 @@ nav ul {
     color: #555;
 }
 
-#scrollTopBtn {
-    display: none;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border: none;
-    cursor: pointer;
-    z-index: 2000;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: opacity 0.3s;
-}
-
-#scrollTopBtn.show {
-    display: flex;
-    opacity: 1;
-}
-
-.scroll-top-img {
-    width: 20px;
-    height: 20px;
-    display: block;
-}
-
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .reveal.show {
@@ -332,7 +244,7 @@ nav ul {
 }
 
 @media (max-width: 1024px) and (min-width: 701px) {
-    .contact-form-wrapper {
+    .container {
         padding: 40px;
     }
 
@@ -348,25 +260,6 @@ nav ul {
 }
 
 @media (max-width: 700px) {
-
-    .contact-section {
-        padding-top: 80px;
-    }
-
-    .contact-form-wrapper {
-        padding: 30px 20px;
-    }
-
-    .form-group input[type="text"],
-    .form-group input[type="email"],
-    .form-group textarea {
-        padding: 12px;
-    }
-
-    .submit-btn {
-        padding: 15px;
-        font-size: 18px;
-    }
 
     .nav-container {
         position: relative;
@@ -447,16 +340,17 @@ nav ul {
     }
 
     .nav-login {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        text-align: center;
+        padding: 10px 22px;
         width: 80vw;
         max-width: 400px;
     }
 
     .mobile-login {
         display: flex;
+    }
+
+    .container {
+        padding: 30px 20px;
+        margin-top: 20px;
     }
 }
