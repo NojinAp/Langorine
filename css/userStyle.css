@@ -247,20 +247,20 @@ nav ul {
 }
 
 .site-footer {
-    padding: 30px 0 20px 0;
+    padding: 2vw 0 1vw 0;
     text-align: center;
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 18px);
     color: #222;
     margin-top: auto;
 }
 
 .footer-builder {
-    font-size: 18px;
+    font-size: clamp(16px, 2.2vw, 20px);
     font-weight: 500;
 }
 
 .footer-rights {
-    font-size: 14px;
+    font-size: clamp(14px, 1.8vw, 18px);
     color: #555;
 }
 
@@ -295,9 +295,33 @@ nav ul {
         height: 55px;
     }
 
+    .site-footer {
+        font-size: clamp(14px, 2.5vw, 18px);
+        padding: 3vw 0 2vw 0;
+    }
+
+    .footer-builder {
+        font-size: clamp(16px, 2.5vw, 20px);
+    }
+
+    .footer-rights {
+        font-size: clamp(14px, 2vw, 18px);
+    }
 }
 
 @media (max-width: 700px) {
+    .site-footer {
+        font-size: 15px;
+        padding: 24px 0 16px 0;
+    }
+
+    .footer-builder {
+        font-size: 16px;
+    }
+
+    .footer-rights {
+        font-size: 13px;
+    }
 
     nav {
         padding: 0;

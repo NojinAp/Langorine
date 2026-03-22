@@ -269,7 +269,7 @@ nav ul {
     gap: 8px;
     transition: background 0.2s;
     justify-content: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .nav-login:hover {

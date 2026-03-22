@@ -103,7 +103,7 @@ nav ul {
     gap: 8px;
     transition: background 0.2s;
     justify-content: center;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .nav-login:hover {
@@ -154,7 +154,7 @@ nav ul {
     background: #fff;
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
     width: 100%;
     max-width: 700px;
 }
@@ -190,7 +190,7 @@ nav ul {
     outline: none;
     border-color: #888;
     background: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .form-group input[type="text"]:hover,
@@ -212,7 +212,7 @@ nav ul {
     cursor: pointer;
     margin-top: 10px;
     transition: background 0.2s;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .submit-btn:hover {
@@ -256,7 +256,7 @@ nav ul {
     color: #fff;
     cursor: pointer;
     transition: background 0.2s;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
 }
 
 .send-another-btn:hover {
@@ -276,20 +276,20 @@ nav ul {
 }
 
 .site-footer {
-    padding: 30px 0 20px 0;
+    padding: 2vw 0 1vw 0;
     text-align: center;
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 18px);
     color: #222;
     margin-top: auto;
 }
 
 .footer-builder {
-    font-size: 18px;
+    font-size: clamp(16px, 2.2vw, 20px);
     font-weight: 500;
 }
 
 .footer-rights {
-    font-size: 14px;
+    font-size: clamp(14px, 1.8vw, 18px);
     color: #555;
 }
 
@@ -338,7 +338,7 @@ nav ul {
     .contact-form-wrapper {
         padding: 40px;
     }
-    
+
     .nav-brand {
         font-size: 22px;
         margin-right: 18px;
@@ -348,23 +348,49 @@ nav ul {
         width: 55px;
         height: 55px;
     }
+
+    .site-footer {
+        font-size: clamp(14px, 2.5vw, 18px);
+        padding: 3vw 0 2vw 0;
+    }
+
+    .footer-builder {
+        font-size: clamp(16px, 2.5vw, 20px);
+    }
+
+    .footer-rights {
+        font-size: clamp(14px, 2vw, 18px);
+    }
 }
 
 @media (max-width: 700px) {
+    .site-footer {
+        font-size: 15px;
+        padding: 24px 0 16px 0;
+    }
+
+    .footer-builder {
+        font-size: 16px;
+    }
+
+    .footer-rights {
+        font-size: 13px;
+    }
+
     .contact-section {
         padding-top: 110px;
     }
-    
+
     .contact-form-wrapper {
         padding: 30px 20px;
     }
-    
+
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group textarea {
         padding: 12px;
     }
-    
+
     .submit-btn {
         padding: 15px;
         font-size: 18px;
