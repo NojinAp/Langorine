@@ -40,9 +40,10 @@ a {
 
 .huge-text {
     text-align: center;
-    font-size: clamp(24px, 3vw, 50px);
+    font-size: clamp(32px, 5vw, 56px);
     font-weight: 600;
-    padding-top: 30px;
+    color: #222;
+    margin-bottom: 20px;
 }
 
 .faq-list {
@@ -188,12 +189,11 @@ nav ul {
 }
 
 .faq-arrow {
-    width: 24px;
-    height: 24px;
+    width: clamp(16px, 4vw, 24px);
+    height: clamp(16px, 4vw, 24px);
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
 
 .faq-answer {
     max-height: 0;
@@ -266,7 +266,7 @@ nav ul {
 @media (max-width: 700px) {
 
     .faq-title {
-        padding-top: 110px;
+        padding-top: 80px;
     }
 
     .nav-container {

@@ -198,7 +198,7 @@ nav ul {
 }
 
 .horiz-section {
-    padding-top: 250px;
+    padding-top: 220px;
     display: flex;
     justify-content: center;
 }
@@ -306,8 +306,10 @@ nav ul {
 }
 
 .fun-card img {
-    width: 100%;
+    width: 120px;
     border-radius: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 .fun-card-title {

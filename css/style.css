@@ -120,17 +120,19 @@ a {
     width: 90vw;
     max-width: 1200px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .flex-box {
     background: #fff;
     color: #222;
     flex: 1 1 0;
+    min-width: 0;
     aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-radius: 2vw;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     padding: 2vw 1vw;

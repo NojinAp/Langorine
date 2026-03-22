@@ -11,7 +11,7 @@ Team Finaly Delivery - French self-learning Platform
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Langorine</title>
-    <link rel="stylesheet" href="css/levelsStyle.css">
+    <link rel="stylesheet" href="css/readingsStyle.css">
     <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/icons/icon.png">
     <script src="js/script.js"></script>
@@ -68,41 +68,79 @@ Team Finaly Delivery - French self-learning Platform
         </div>
     </nav>
 
-    <section class="main-title reveal">
-        <div class="huge-text">Begin your journey!</div>
-        <div class="select-level-label">Select your level:</div>
-        <div class="level-options">
-            <a href="library.html">
-                <div class="level-option">A1 <span class="level-arrow"><img src="images/icons/curved-right-arrow.png"
-                            alt="Curved Right Arrow"></span></div>
-            </a>
-            <a href="library.html">
-                <div class="level-option">A2 <span class="level-arrow"><img src="images/icons/curved-right-arrow.png"
-                            alt="Curved Right Arrow"></span></div>
-            </a>
-            <a href="library.html">
-                <div class="level-option">B1 <span class="level-arrow"><img src="images/icons/curved-right-arrow.png"
-                            alt="Curved Right Arrow"></span></div>
-            </a>
-            <a href="library.html">
-                <div class="level-option">B2 <span class="level-arrow"><img src="images/icons/curved-right-arrow.png"
-                            alt="Curved Right Arrow"></span></div>
-            </a>
-            <a href="library.html">
-                <div class="level-option">C1 <span class="level-arrow"><img src="images/icons/curved-right-arrow.png"
-                            alt="Curved Right Arrow"></span></div>
-            </a>
-            <a href="library.html">
-                <div class="level-option">C2 <span class="level-arrow"><img src="images/icons/curved-right-arrow.png"
-                            alt="Curved Right Arrow"></span></div>
-            </a>
+    <section class="content-layout reveal">
+
+        <input type="radio" name="story" id="story1" checked>
+        <input type="radio" name="story" id="story2">
+        <input type="radio" name="story" id="story3">
+
+        <div class="mobile-poem-toggle" id="mobilePoemToggle">
+            <span>Stories</span>
+            <span class="mobile-poem-arrow">▼</span>
         </div>
+
+        <div class="sidebar">
+            <div class="sidebar-title">Stories</div>
+
+            <label for="story1">The Lost Cat</label>
+            <label for="story2">A Day in Paris</label>
+            <label for="story3">The Secret Letter</label>
+        </div>
+
+        <div class="story-content">
+
+            <div class="story story1">
+                <h2>The Lost Cat</h2>
+
+                <p class="original">
+                    One quiet afternoon, a small cat wandered away from home...
+                </p>
+
+                <div class="translation-box">
+                    <div class="translation-title">Translation</div>
+                    <p>
+                        Un après-midi calme, un petit chat s'est éloigné de chez lui...
+                    </p>
+                </div>
+            </div>
+
+            <div class="story story2">
+                <h2>The Lost Cat</h2>
+
+                <p class="original">
+                    One quiet afternoon, a small cat wandered away from home...
+                </p>
+
+                <div class="translation-box">
+                    <div class="translation-title">Translation</div>
+                    <p>
+                        Un après-midi calme, un petit chat s'est éloigné de chez lui...
+                    </p>
+                </div>
+            </div>
+
+            <div class="story story3">
+                <h2>The Lost Cat</h2>
+
+                <p class="original">
+                    One quiet afternoon, a small cat wandered away from home...
+                </p>
+
+                <div class="translation-box">
+                    <div class="translation-title">Translation</div>
+                    <p>
+                        Un après-midi calme, un petit chat s'est éloigné de chez lui...
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
-    <footer class="site-footer">
-        <div class="footer-builder">Built and designed by PixelATE.</div>
-        <div class="footer-rights">&copy; All rights reserved.</div>
-    </footer>
+    <button id="scrollTopBtn">
+        <img src="images/icons/curved-arrow.png" alt="Scroll to top" class="scroll-top-img">
+    </button>
 
 </body>
 
