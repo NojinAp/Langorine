@@ -40,67 +40,6 @@ window.addEventListener('load', () => {
         });
     }
 
-    const guestNav = document.getElementById("guestNav");
-    const userNav = document.getElementById("userNav");
-
-    const mobileGuestNav = document.getElementById("mobileGuestNav");
-    const mobileUserNav = document.getElementById("mobileUserNav");
-
-    const logoutBtn = document.getElementById("logoutBtn");
-    const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
-
-    // TEMP toggle (no login system yet)
-    let isLoggedIn = false;
-
-    function updateNav() {
-        if (isLoggedIn) {
-            if (guestNav) guestNav.style.display = "none";
-            if (userNav) userNav.style.display = "flex";
-
-            if (mobileGuestNav) mobileGuestNav.style.display = "none";
-            if (mobileUserNav) mobileUserNav.style.display = "flex";
-        } else {
-            if (guestNav) guestNav.style.display = "flex";
-            if (userNav) userNav.style.display = "none";
-
-            if (mobileGuestNav) mobileGuestNav.style.display = "flex";
-            if (mobileUserNav) mobileUserNav.style.display = "none";
-        }
-    }
-
-    // simulate login (click sign in)
-    if (guestNav) {
-        guestNav.addEventListener("click", () => {
-            isLoggedIn = true;
-            updateNav();
-        });
-    }
-
-    if (mobileGuestNav) {
-        mobileGuestNav.addEventListener("click", () => {
-            isLoggedIn = true;
-            updateNav();
-        });
-    }
-
-    // logout
-    if (logoutBtn) {
-        logoutBtn.addEventListener("click", () => {
-            isLoggedIn = false;
-            updateNav();
-        });
-    }
-
-    if (mobileLogoutBtn) {
-        mobileLogoutBtn.addEventListener("click", () => {
-            isLoggedIn = false;
-            updateNav();
-        });
-    }
-
-    // initialize
-    updateNav();
-
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
